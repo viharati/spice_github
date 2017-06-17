@@ -65,7 +65,7 @@ plt.figure(2)
 plt.plot(xtotal[1-1][:], xtotal[2-1][:], marker='', label='i1', markevery=2)
 plt.figure(3)
 plt.plot(xtotal[1-1][:], -xtotal[3-1][:], marker='', label='i1', markevery=2)
-
+plt.show()
 
 #
 #
