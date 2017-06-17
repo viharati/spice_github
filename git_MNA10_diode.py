@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 dt=0.0001
 Vin=1
 
-r1=0.100
+r1=10
 g1=1/r1
 c1=1e-6
 vd=0.0001
@@ -28,11 +28,11 @@ nn=101
 xtotal=np.zeros([3,nn])
 
 for i in range(nn):
-    f[-1]=+0.01*i    
+    f[-1]=+0.05*i    
     x=np.dot(np.linalg.inv(E),f)
 
     
-    for k in range(30):
+    for k in range(300):
         F=np.dot(E,x)-f
     
         P=np.zeros([3,3])
@@ -48,8 +48,9 @@ for i in range(nn):
         xtotal[:,i]=x.ravel()
          
         
-        if(err<1e-4):
+        if(err<1e-5):
             print(k,err,x[0],x[1],x[2])
+            print(vd, gd, dgd)
             break
         
         vd=x[1]
