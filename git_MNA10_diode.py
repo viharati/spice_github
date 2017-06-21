@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 dt=0.0001
 Vin=1
 
-r1=10
+r1=1000
 g1=1/r1
 c1=1e-6
 vd=0.0001
@@ -63,7 +63,7 @@ t = np.arange(nn)
 plt.plot(t, xtotal[1-1][:], marker='', label='i1', markevery=2)
 plt.plot(t, xtotal[2-1][:], marker='', label='i1', markevery=2)
 plt.figure(2)
-plt.plot(xtotal[1-1][:], xtotal[2-1][:], marker='', label='i1', markevery=2)
+plt.semilogy(xtotal[1-1][:], -xtotal[3-1][:], marker='', label='i1', markevery=2)
 plt.figure(3)
 plt.plot(xtotal[1-1][:], -xtotal[3-1][:], marker='', label='i1', markevery=2)
 plt.show()
